@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#documents-section {
+  padding: 50px 30px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 108%;
+  color: #000;
+  background: #fff;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .category {
+    &-header {
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      border: 1px solid #dfe4ef;
+    }
+
+    .items {
+      padding-left: 16px;
+      overflow: hidden;
+      transition: height 0.5s ease, opacity 0.5s ease;
+      opacity: 1;
+      height: auto;
+
+      &.collapsed {
+        opacity: 0;
+        height: 0;
+      }
+
+      & .move-btn {
+        padding: 12px 14px;
+      }
+    }
+
+    .item {
+      padding: 5px 5px 5px 14px;
+      border: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 400;
+      font-size: 13px;
+
+      &:first-child {
+        border-top: none;
+      }
+    }
+
+    .move-btn {
+      background-image: url(/src/img/drop.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-left: auto;
+      border: none;
+      padding: 12px 9px;
+      border-radius: 4px;
+      cursor: move;
+      transition: background-color 0.3s;
+      background-color: transparent;
+
+      &:hover {
+        background: transparent url(/src/img/drop-active.svg) no-repeat center;
+      }
+    }
+
+    .arrow-icon {
+      border: 1px solid #D3D8DF;
+      border-radius: 50%;
+      display: inline-block;
+      background-image: url(/src/img/arrow.svg);
+      background-size: 8px;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 10px;
+      margin: 0 14px 0 5px;
+      transition: transform 0.3s ease;
+
+      &.rotated {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .sortable-ghost {
+    opacity: 0.5;
+  }
+
+  .sortable-chosen {
+    box-shadow: 0 3px 16px 0 rgba(0, 102, 255, 0.7);
+    background: #fff;
+  }
+
+  .drop-indicator {
+    border-top: 5px solid #0066FF;
+    margin: 0;
+  }
+}

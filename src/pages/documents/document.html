@@ -1,0 +1,12 @@
+<div id="documents-section">
+    <ul data-bind="foreach: categories, sortableList: {}, isCategory: true">
+        <li class="category" data-bind="attr: {'data-id': id}">
+            <div class="category-header" data-bind="click: $parent.toggleExpand">
+                <span class="arrow-icon" data-bind="css: { rotated: expanded }"></span>
+                <span data-bind="text: title"></span>
+                <button class="move-btn"></button>
+            </div>
+            <items-list-component params="items: items, expanded: expanded"></items-list-component>
+        </li>
+    </ul>
+</div>
