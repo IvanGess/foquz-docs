@@ -1,0 +1,100 @@
+/*!*****************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/pages/documents/documents.scss ***!
+  \*****************************************************************************************************************************/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#documents-section {
+  padding: 50px 30px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 108%;
+  color: #000;
+  background: #fff;
+}
+#documents-section h2 {
+  margin-bottom: 20px;
+}
+#documents-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#documents-section .category-header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #dfe4ef;
+}
+#documents-section .category .items {
+  padding-left: 16px;
+  overflow: hidden;
+  transition: height 0.5s ease, opacity 0.5s ease;
+  opacity: 1;
+  height: auto;
+}
+#documents-section .category .items.collapsed {
+  opacity: 0;
+  height: 0;
+}
+#documents-section .category .items .move-btn {
+  padding: 12px 14px;
+}
+#documents-section .category .item {
+  padding: 5px 5px 5px 14px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  font-size: 13px;
+}
+#documents-section .category .item:first-child {
+  border-top: none;
+}
+#documents-section .category .move-btn {
+  background-image: url(916b43e153a2d3cc44c6.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  border: none;
+  padding: 12px 9px;
+  border-radius: 4px;
+  cursor: move;
+  transition: background-color 0.3s;
+  background-color: transparent;
+}
+#documents-section .category .move-btn:hover {
+  background: transparent url(bde3719bcdc5032cba31.svg) no-repeat center;
+}
+#documents-section .category .arrow-icon {
+  border: 1px solid #D3D8DF;
+  border-radius: 50%;
+  display: inline-block;
+  background-image: url(ed60b32f60301aca21bc.svg);
+  background-size: 8px;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+  margin: 0 14px 0 5px;
+  transition: transform 0.3s ease;
+}
+#documents-section .category .arrow-icon.rotated {
+  transform: rotate(180deg);
+}
+#documents-section .sortable-ghost {
+  opacity: 0.5;
+}
+#documents-section .sortable-chosen {
+  box-shadow: 0 3px 16px 0 rgba(0, 102, 255, 0.7);
+  background: #fff;
+}
+#documents-section .drop-indicator {
+  border-top: 5px solid #0066FF;
+  margin: 0;
+}
